@@ -1,0 +1,10 @@
+
+.header {
+    height: 150px;
+}
+.jumbotron {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}

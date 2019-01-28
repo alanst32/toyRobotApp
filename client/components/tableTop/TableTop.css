@@ -1,0 +1,42 @@
+.mainDiv {
+    justify-content: center;
+    text-align: center;
+    display: block;
+    position: relative;
+    margin-top: 20px;
+}
+.divStyle {
+    flex-direction: column;
+    width: 65%;
+    position: relative;
+    margin: auto;
+    border-radius: 15px;
+    border: 2px solid #c8e6c9;
+    display: flex;
+    padding-bottom: 60px;
+}
+.reportStatus {
+    display: inline-flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    justify-content: center;
+    align-content: center;
+}
+.components {
+    display: inline-flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+.textField {
+    width: 80px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+.reportLabelCss {
+    font-size: 30px;
+    font-weight: bold;
+    color: red
+}

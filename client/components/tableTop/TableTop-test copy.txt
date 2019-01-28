@@ -1,0 +1,74 @@
+import React from 'react';
+import TableTop from './TableTop';
+import { withStyles } from '@material-ui/core/styles';
+var { ReactWrapper, shallow, mount } = require('enzyme');
+import { func } from 'prop-types';
+import { createShallow } from '@material-ui/core/test-utils';
+
+
+describe('TableTop', function () {
+    let wrapperShallow;
+    let wrapperMount;
+    let create;
+
+    const state = {
+        reportStatus: '',
+        direction: {
+            NORTH: 'NORTH',
+            SOUTH: 'SOUTH',
+            EAST: 'EAST',
+            WEST: 'WEST'
+        },
+        grid: {
+            ix: 0, // X initial value
+            sx: 4, // X size
+            iy: 0, // Y initial value
+            sy: 4, // Y size
+        },
+        robot: {
+            rx: 0, // X robot position,
+            ry: 0,// Y robot position,
+            face: 'NORTH'
+        },
+        placeInput: {
+            x: 0,
+            y: 0,
+            face: 'NORTH'
+        },
+        msg: {
+            INVALID: 'Invalid parameters',
+            OUT_OF_BOUNDS: 'Robot is out of Bounds. Back to the last valid position.',
+            ROBOT_POSITION: 'Robot is at position:',
+            FACING: 'Facing: '
+        }
+    };
+    beforeEach(() => {
+        
+
+        //wrapperShallow = shallow(<TableTop/>);
+        wrapperMount = mount(<TableTop/>);
+        console.log(wrapperMount);
+
+        const contentWrapper = new ReactWrapper(wrapperMount);
+        console.log(contentWrapper);
+       
+
+        //console.log(wrapperShallow.state('robot'));
+
+        // wrapperShallow.instance().componentDidMount();
+        // wrapperShallow.instance().publishesReport;
+        //console.log(wrapperShallow.state('reportStatus'));
+       
+    });
+
+   
+    it('Test initialized App', function () {
+        //wrapper.instance().publishesReport();
+        wrapperMount.publishesReport();
+        console.log(wrapperMount.state());
+        expect(wrapperMount.state().robot.rx).to.equal(0);
+    });
+
+ 
+    
+});
