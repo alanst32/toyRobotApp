@@ -12,10 +12,6 @@ Frameworks Used:
 - Node JS
 - Webpack
 
-Although is not required to create an interface I thought it would be useful to display the control of the robot. And since I decided to create in React I think it will make ore sense as well.
-The UI is very simple where the user indicates where he needs to place the robot. There is a validation for the right values on the input. But again, the 
-interface is very simple since this was not the purpose of the application.
-
 Application:
 The application has 3 Components. TableTop component is the one that controls the robot movement.
 TableTop uses Styles attributes from css for the interface and inLineStyles for the Material UI components configuration.
